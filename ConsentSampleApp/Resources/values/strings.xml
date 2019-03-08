@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConsentSampleApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="admob_publisher_id">PUB_ID</string>
+    <string name="privacy_url">PRIVACY_URL</string>
+</resources>
