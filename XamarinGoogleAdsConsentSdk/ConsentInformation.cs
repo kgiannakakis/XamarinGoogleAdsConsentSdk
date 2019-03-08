@@ -176,6 +176,7 @@ namespace ConsentLibrary
 
 
             ConsentData consentData = LoadConsentData();
+
             Android.Net.Uri.Builder uriBuilder =
                 Android.Net.Uri.Parse(url)
                     .BuildUpon()
@@ -228,10 +229,7 @@ namespace ConsentLibrary
                 {
                     var responseString = await response.Content.ReadAsStringAsync();
                     UpdateConsentData(responseString, publisherIds.ToList());
-                    if (OnConsentInfoUpdated != null)
-                    {
-                        OnConsentInfoUpdated(GetConsentStatus());
-                    }
+                    OnConsentInfoUpdated?.Invoke(GetConsentStatus());
                 }
                 else
                 {
@@ -354,7 +352,7 @@ namespace ConsentLibrary
 
         [MethodImpl(MethodImplOptions.Synchronized)]
         private void UpdateConsentData(String responseString,
-                                                   List<String> publisherIds)
+                                       List<String> publisherIds)
         {
             ServerResponse response = JsonConvert.DeserializeObject<ServerResponse>(responseString);
             ValidatePublisherIds(response);
@@ -414,7 +412,7 @@ namespace ConsentLibrary
                 return;
             }
 
-            if (!consentData.AdProviders.Equals(consentData.ConsentedAdProviders)
+            if (!consentData.AdProviders.SequenceEqual(consentData.ConsentedAdProviders)
                 || hasNonPersonalizedPublisherIdChanged)
             {
                 consentData.ConsentSource = "sdk";
