@@ -1,9 +1,16 @@
-﻿<html>
+﻿using System;
+
+namespace ConsentLibrary
+{
+    public static class HtmlConsentForm
+    {
+        public static String form = @"
+<html>
 <head>
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
-    <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <style type="text/css">
+    <meta charset=""utf-8"" />
+    <link href=""https://fonts.googleapis.com/css?family=Roboto:400,500"" rel=""stylesheet"">
+    <style type=""text/css"">
         /* Overwrite the default to keep the scrollbar always visible */
         ::-webkit-scrollbar {
             -webkit-appearance: none;
@@ -554,7 +561,7 @@
             }
         }
     </style>
-    <script type="text/javascript">var obj = {};
+    <script type=""text/javascript"">var obj = {};
     var state = 'init';
     var consentDelayMs = 1000;
      // Function that opens app privacy policy URL in a browser.
@@ -916,64 +923,64 @@
     }, consentDelayMs);</script>
 </head>
 <body>
-    <div id="overlay" class="center hidden">
-        <div id="content">
-            <div id="content-box">
-                <div class="app-title flex-center">
-                    <span id="title_app_name" class="app_name">App Name</span>
+    <div id=""overlay"" class=""center hidden"">
+        <div id=""content"">
+            <div id=""content-box"">
+                <div class=""app-title flex-center"">
+                    <span id=""title_app_name"" class=""app_name"">App Name</span>
                 </div>
-                <div id="options">
-                    <div id="title_head">
-                        <div class="head_intro">We care about your privacy and data security. We keep this app free by showing ads.</div>
-                        <div id="head_question">Can we continue to use your data to tailor ads for you?</div>
-                        <div class="head_detail">
-                            <span id="change_anytime_text1">You can change your choice anytime for <span class="app_name">App Name</span> in the app settings.</span>
-                            <span id="head_detail_text">
+                <div id=""options"">
+                    <div id=""title_head"">
+                        <div class=""head_intro"">We care about your privacy and data security. We keep this app free by showing ads.</div>
+                        <div id=""head_question"">Can we continue to use your data to tailor ads for you?</div>
+                        <div class=""head_detail"">
+                            <span id=""change_anytime_text1"">You can change your choice anytime for <span class=""app_name"">App Name</span> in the app settings.</span>
+                            <span id=""head_detail_text"">
                                 Our partners will collect data and use a unique identifier on your device to show you ads.
-                                <a href="#" onclick="showProviders();">Learn how <span class="app_name">App Name</span> and our <span id="providers_count"></span> partners collect and use data</a>
+                                <a href=""#"" onclick=""showProviders();"">Learn how <span class=""app_name"">App Name</span> and our <span id=""providers_count""></span> partners collect and use data</a>
                             </span>
                         </div>
                     </div>
-                    <div id="buttons" data-sel="">
-                        <div id="btn0" class="button btn0 flex-center" onclick="actionClick(event, 'agree0');">
-                            <div class="button_title">Yes, continue to see relevant ads</div>
+                    <div id=""buttons"" data-sel="""">
+                        <div id=""btn0"" class=""button btn0 flex-center"" onclick=""actionClick(event, 'agree0');"">
+                            <div class=""button_title"">Yes, continue to see relevant ads</div>
                         </div>
-                        <div id="btn1" class="button btn1 flex-center" onclick="showUniqueIdInfo();">
-                            <div id="btn1_title" class="button_title">No, see ads that are less relevant</div>
+                        <div id=""btn1"" class=""button btn1 flex-center"" onclick=""showUniqueIdInfo();"">
+                            <div id=""btn1_title"" class=""button_title"">No, see ads that are less relevant</div>
                         </div>
-                        <div id="btn2" class="button btn2 flex-center" onclick="actionClick(event, 'install');">
-                            <div class="button_title">Pay for the ad-free version</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="consent0" class="consent no-display">
-                    <div class="message"><span id="change_anytime_text2">You can change your choice anytime for <span class="app_name">App Name</span> in the app settings. </span>Learn how our partners collect and use data:</div>
-                    <div id="providers">
-                    </div>
-                    <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">How <span class="app_name">App Name</span> uses your data</a></div>
-                    <div class="footer">
-                        <div class="actions">
-                            <div class="back btn" onclick="actionClick(event, 'back0')">Back</div>
+                        <div id=""btn2"" class=""button btn2 flex-center"" onclick=""actionClick(event, 'install');"">
+                            <div class=""button_title"">Pay for the ad-free version</div>
                         </div>
                     </div>
                 </div>
-                <div id="consent1" class="consent no-display">
-                    <div class="message">We’ll partner with Google and use a unique identifier on your device to respect your data usage choice. You can change your choice anytime for <span class="app_name">App Name</span> in the app settings.</div>
-                    <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">How <span class="app_name">App Name</span> uses your data</a></div>
-                    <div class="footer">
-                        <div class="actions">
-                            <div id="back-btn" class="back btn" onclick="actionClick(event, 'back1')">Back</div>
-                            <div class="agree btn" onclick="actionClick(event, 'agree1')">Agree</div>
+                <div id=""consent0"" class=""consent no-display"">
+                    <div class=""message""><span id=""change_anytime_text2"">You can change your choice anytime for <span class=""app_name"">App Name</span> in the app settings. </span>Learn how our partners collect and use data:</div>
+                    <div id=""providers"">
+                    </div>
+                    <div class=""how-use-data""><a href=""#"" onclick=""showAppPrivacyPolicy(event)"">How <span class=""app_name"">App Name</span> uses your data</a></div>
+                    <div class=""footer"">
+                        <div class=""actions"">
+                            <div class=""back btn"" onclick=""actionClick(event, 'back0')"">Back</div>
                         </div>
                     </div>
                 </div>
-                <div id="consent2" class="consent no-display">
-                    <div class="head_intro">We care about your privacy and data security. We keep this app free by showing ads.</div>
-                    <div class="message">We’ll partner with Google and use a unique identifier on your device to serve non-personalized ads.</div>
-                    <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">How <span class="app_name">App Name</span> uses your data</a></div>
-                    <div class="footer">
-                        <div class="actions">
-                            <div class="agree btn" onclick="actionClick(event, 'agree1')">Agree</div>
+                <div id=""consent1"" class=""consent no-display"">
+                    <div class=""message"">We’ll partner with Google and use a unique identifier on your device to respect your data usage choice. You can change your choice anytime for <span class=""app_name"">App Name</span> in the app settings.</div>
+                    <div class=""how-use-data""><a href=""#"" onclick=""showAppPrivacyPolicy(event)"">How <span class=""app_name"">App Name</span> uses your data</a></div>
+                    <div class=""footer"">
+                        <div class=""actions"">
+                            <div id=""back-btn"" class=""back btn"" onclick=""actionClick(event, 'back1')"">Back</div>
+                            <div class=""agree btn"" onclick=""actionClick(event, 'agree1')"">Agree</div>
+                        </div>
+                    </div>
+                </div>
+                <div id=""consent2"" class=""consent no-display"">
+                    <div class=""head_intro"">We care about your privacy and data security. We keep this app free by showing ads.</div>
+                    <div class=""message"">We’ll partner with Google and use a unique identifier on your device to serve non-personalized ads.</div>
+                    <div class=""how-use-data""><a href=""#"" onclick=""showAppPrivacyPolicy(event)"">How <span class=""app_name"">App Name</span> uses your data</a></div>
+                    <div class=""footer"">
+                        <div class=""actions"">
+                            <div class=""agree btn"" onclick=""actionClick(event, 'agree1')"">Agree</div>
                         </div>
                     </div>
                 </div>
@@ -982,3 +989,6 @@
     </div>
 </body>
 </html>
+";
+    }
+}

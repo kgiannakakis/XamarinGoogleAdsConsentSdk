@@ -291,7 +291,7 @@ namespace ConsentLibrary
             }
 
             this.loadState = LoadState.LOADING;
-            this.webView.LoadUrl("file:///android_asset/consentform.html");
+            this.webView.LoadData(HtmlConsentForm.form, "text/html; charset=utf-8", "UTF-8");
         }
 
         private void HandleLoadComplete(String status)

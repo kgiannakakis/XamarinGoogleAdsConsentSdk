@@ -6,12 +6,12 @@ using Android.App;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XamarinGoogleAdsConsentSdk")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Xamarin.GoogleAds.Consent.Sdk")]
+[assembly: AssemblyDescription("Google Ads Consent Sdk for Xamarin.Android")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XamarinGoogleAdsConsentSdk")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("Kostas Giannakakis")]
+[assembly: AssemblyProduct("Xamarin.GoogleAds.Consent.Sdk")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
