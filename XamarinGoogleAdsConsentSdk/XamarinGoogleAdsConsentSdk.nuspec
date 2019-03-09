@@ -13,14 +13,13 @@
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>xamarin android google ads consent sdk</tags>
-    
     <dependencies>
-      <group targetFramework="MonoAndroid9.0">
+      <group targetFramework="MonoAndroid5.0">
         <dependency id="Newtonsoft.Json" version="12.0.1" />
       </group>
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid5.0" />
+    </frameworkAssemblies>
   </metadata>
-  <files>
-      <file src="bin\Release\*.dll" target="lib\MonoAndroid50" />
-  </files>
 </package>
