@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Xamarin.GoogleAds.Consent.Sdk</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
     <title>Google Ads Consent Sdk for Xamarin.Android</title>
     <authors>Kostas Giannakakis</authors>
     <owners>Kostas Giannakakis</owners>
@@ -12,7 +12,7 @@
     <description>Google Ads Consent Sdk for Xamarin.Android</description>
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright 2019</copyright>
-    <tags>xamarin android google ads consent sdk</tags>
+    <tags>xamarin android google ads consent sdk GDPR</tags>
     <dependencies>
       <group targetFramework="MonoAndroid5.0">
         <dependency id="Newtonsoft.Json" version="12.0.1" />
