@@ -412,7 +412,7 @@ namespace ConsentLibrary
                 return;
             }
 
-            if (!consentData.AdProviders.SequenceEqual(consentData.ConsentedAdProviders)
+            if (!consentData.ConsentedAdProviders.SequenceEqual(consentData.AdProviders)
                 || hasNonPersonalizedPublisherIdChanged)
             {
                 consentData.ConsentSource = "sdk";

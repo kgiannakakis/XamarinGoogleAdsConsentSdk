@@ -2,12 +2,14 @@
 using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using AndroidX.AppCompat.App;
+using V7Toolbar = AndroidX.AppCompat.Widget.Toolbar;
 using ConsentLibrary;
+using Google.Android.Material.FloatingActionButton;
+using Google.Android.Material.Snackbar;
 
 namespace ConsentSampleApp
 {
@@ -24,7 +26,7 @@ namespace ConsentSampleApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            V7Toolbar toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
