@@ -28,15 +28,12 @@ namespace ConsentLibrary
 
             AdProvider that = (AdProvider)obj;
 
-            return Id.Equals(that.Id) && Name.Equals(that.Name)
-                && PrivacyPolicyUrlString.Equals(that.PrivacyPolicyUrlString);
+            return Id.Equals(that.Id);
         }
 
         public override int GetHashCode()
         {
             int result = Id.GetHashCode();
-            result = 31 * result + Name.GetHashCode();
-            result = 31 * result + PrivacyPolicyUrlString.GetHashCode();
             return result;
         }
     }

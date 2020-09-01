@@ -241,7 +241,7 @@ namespace ConsentLibrary
                 byteArray = stream.ToArray();
             }
 
-            return "data:image/png;base64," + Base64.EncodeToString(byteArray, Base64.Default);
+            return "data:image/png;base64," + Base64.EncodeToString(byteArray, Base64Flags.Default);
         }
 
         private static String CreateJavascriptCommand(String command, String argumentsJSON)
@@ -291,7 +291,7 @@ namespace ConsentLibrary
             }
 
             this.loadState = LoadState.LOADING;
-            this.webView.LoadData(HtmlConsentForm.form, "text/html; charset=utf-8", "UTF-8");
+            this.webView.LoadUrl("file:///android_asset/Content/consentform.html"); //Load HTML file instead of html class
         }
 
         private void HandleLoadComplete(String status)

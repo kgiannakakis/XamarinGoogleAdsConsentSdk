@@ -9,7 +9,7 @@ namespace ConsentLibrary
     {
         private const String SDK_PLATFORM = "android";
 
-        private const String SDK_VERSION = "1.0.7";
+        private const String SDK_VERSION = "1.0.8";
 
         [JsonProperty(PropertyName = "providers")]
         internal HashSet<AdProvider> AdProviders { get; set; }
